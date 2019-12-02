@@ -1,0 +1,16 @@
+server:
+  port: 8085
+
+
+search:
+  city: 成都
+  regions: 高新区
+  keyword: 急,新鸿基
+
+email:
+  fromPassword: xxx
+  fromEmail: xxx@163.com
+  fromPort: 465
+  fromHost: smtp.163.com
+  toAddr: xxxx@163.com
+
