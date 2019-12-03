@@ -61,6 +61,7 @@ public class SpiderService {
             String streetUrl = url + street + "/pg1";
             houseProcessor.setCity(cityName);
             houseProcessor.setRegion(name);
+            houseProcessor.setCount(1);
             Spider.create(houseProcessor).addUrl(streetUrl).thread(1).run();
         }
     }

@@ -29,6 +29,8 @@ public class HouseProcessor implements PageProcessor {
     private String city;
     @Setter
     private String region;
+    @Setter
+    int count = 1;
 
     @Autowired
     private EmailConfig emailConfig;
@@ -43,7 +45,6 @@ public class HouseProcessor implements PageProcessor {
     public void process(Page page) {
         try {
             log.info("=============process(house)================");
-            int count = 1;
             if (!page.getHtml().xpath("//ul[@class='sellListContent']").match()) {
                 page.setSkip(true);
             } else {
