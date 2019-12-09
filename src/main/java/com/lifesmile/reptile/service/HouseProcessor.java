@@ -83,7 +83,7 @@ public class HouseProcessor implements PageProcessor {
                     IOUtil.outFile(house.getId(), "record.txt");
                     String[] split = emailConfig.getToAddr().split(",");
                     for (int j = 0; j < split.length; j++) {
-                        emailService.sendMail("shenhuan1006@163.com", house);
+                        emailService.sendMail(split[j], house);
                     }
                     Cache.recordCache.put(house.getId(),"1");
                     return;
